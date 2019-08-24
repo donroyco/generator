@@ -1,0 +1,40 @@
+.gen-strength-bar {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  margin-bottom: 10px;
+  background-color: #efefef;
+
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    transition: width .3s ease-in-out;
+
+    &--darkgreen {
+      width: 100%;
+      background-color: #1b7821;
+    }
+
+    &--green {
+      width: 80%;
+      background-color: #2dc937;
+    }
+
+    &--yellow {
+      width: 60%;
+      background-color: #e7b416;
+    }
+
+    &--orange {
+      width: 30%;
+      background-color: #db7b2b;
+    }
+
+    &--red {
+      width: 10%;
+      background-color: #cc3232;
+    }
+  }
+}

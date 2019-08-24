@@ -9,21 +9,27 @@
 
     <div class="gen-slider">
       <label class="gen-slider-description">Characters: <strong>{{charSliderValue}}</strong></label>
-      <mat-slider thumbLabel [(ngModel)]="charSliderValue" [min]="sliderMin" [max]="sliderMaxChar" class="gen-slider-tool"></mat-slider>
+      <mat-slider [(ngModel)]="charSliderValue" [min]="sliderMin" [max]="sliderMaxChar" class="gen-slider-tool"></mat-slider>
     </div>
 
     <div class="gen-slider">
       <label class="gen-slider-description">Numbers: <strong>{{numberSliderValue}}</strong></label>
-      <mat-slider thumbLabel [(ngModel)]="numberSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
+      <mat-slider [(ngModel)]="numberSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
     </div>
 
     <div class="gen-slider">
       <label class="gen-slider-description">Special characters: <strong>{{specialSliderValue}}</strong></label>
-      <mat-slider thumbLabel [(ngModel)]="specialSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
+      <mat-slider [(ngModel)]="specialSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
     </div>
 
+    <strength-indicator
+      [charValue]="charSliderValue"
+      [numberValue]="numberSliderValue"
+      [specialValue]="specialSliderValue"
+    ></strength-indicator>
+
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions align="end">
     <button mat-stroked-button (click)="generateString()" color="primary">Renegerate</button>
   </mat-card-actions>
 </mat-card>
