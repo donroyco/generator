@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { GeneratorService } from './services/generator.service';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { GeneratorService } from './services/generator.service';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
-  providers: [GeneratorService],
-  bootstrap: [AppComponent]
+  providers: [ GeneratorService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

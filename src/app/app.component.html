@@ -1,1 +1,29 @@
+<mat-card>
+  <mat-card-title>Generate random string</mat-card-title>
+  <mat-card-content>
+    <form class="gen-form">
+      <mat-form-field class="gen-form-field--full-width">
+        <input matInput [value]="generatedString">
+      </mat-form-field>
+    </form>
 
+    <div class="gen-slider">
+      <label class="gen-slider-description">Characters: <strong>{{charSliderValue}}</strong></label>
+      <mat-slider thumbLabel [(ngModel)]="charSliderValue" [min]="sliderMin" [max]="sliderMaxChar" class="gen-slider-tool"></mat-slider>
+    </div>
+
+    <div class="gen-slider">
+      <label class="gen-slider-description">Numbers: <strong>{{numberSliderValue}}</strong></label>
+      <mat-slider thumbLabel [(ngModel)]="numberSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
+    </div>
+
+    <div class="gen-slider">
+      <label class="gen-slider-description">Special characters: <strong>{{specialSliderValue}}</strong></label>
+      <mat-slider thumbLabel [(ngModel)]="specialSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button (click)="generateString()" color="primary">Renegerate</button>
+  </mat-card-actions>
+</mat-card>

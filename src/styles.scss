@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-card:not([class*=mat-elevation-z]) {
+  @media screen and (min-width: 600px) {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  }
+
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+.gen-wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+

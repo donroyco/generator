@@ -1,20 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GeneratorService } from './services/generator.service';
+import { SLIDER_DEFAULTS } from './generator.constants';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./_app.component.scss']
 })
 export class AppComponent implements OnInit {
-  generated: string;
+  charSliderValue = SLIDER_DEFAULTS.defaultChar;
+  numberSliderValue = SLIDER_DEFAULTS.defaultNumber;
+  specialSliderValue = SLIDER_DEFAULTS.defaultSpecial;
+
+  generatedString: string;
+  sliderMin = SLIDER_DEFAULTS.min;
+  sliderMax = SLIDER_DEFAULTS.max;
+  sliderMaxChar = SLIDER_DEFAULTS.maxChar;
 
   constructor(private generatorService: GeneratorService) { }
 
   ngOnInit() {
-    this.generated = this.generatorService.generateUniqueString(10, 2, 1);
-    console.log('I AM: ', this.generated);
+    this.generateString();
   }
 
-
+  generateString(): string {
+    return this.generatedString = this.generatorService.generateUniqueString(
+      this.charSliderValue,
+      this.numberSliderValue,
+      this.specialSliderValue
+    );
+  }
 }
