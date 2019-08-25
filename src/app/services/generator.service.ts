@@ -5,8 +5,14 @@ import { DEFAULTS } from '../generator.constants';
 @Injectable()
 export class GeneratorService {
 
-  public generateUniqueString(chars: number, numbers?: number, specialCharacters?: number) {
-    const partChar = this.generateChar(chars);
+  public generateUniqueString(chars: number = 1, numbers?: number, specialCharacters?: number) {
+    let charsLength = chars - numbers - specialCharacters;
+
+    if (charsLength < 0) {
+      charsLength = 1;
+    }
+
+    const partChar = this.generateChar(charsLength);
     const partNumber = this.generateNumber(numbers);
     const partSpecialChar = this.generateSpecialCharacters(specialCharacters);
 

@@ -10,7 +10,7 @@ export const SLIDER_DEFAULTS = {
   defaultSpecial: 1,
   min: 1,
   max: 10,
-  maxChar: 30
+  maxChar: 40
 };
 
 export const STRENGTH_COMMENTS = {
