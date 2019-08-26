@@ -3,23 +3,23 @@
   <mat-card-content>
     <form class="gen-form">
       <mat-form-field class="gen-form-field--full-width">
-        <input matInput [value]="generatedString">
+        <input matInput [value]="generatedString" placeholder="Generated string" aria-label="Generated string">
       </mat-form-field>
     </form>
 
     <div class="gen-slider">
-      <label class="gen-slider-description">Length: <strong>{{charSliderValue}}</strong></label>
-      <mat-slider [(ngModel)]="charSliderValue" [min]="sliderMin" [max]="sliderMaxChar" class="gen-slider-tool"></mat-slider>
+      <label for="mat-slider-chars" class="gen-slider-description">Length: <strong>{{charSliderValue}}</strong></label>
+      <mat-slider [(ngModel)]="charSliderValue" [min]="sliderMin" [max]="sliderMaxChar" id="mat-slider-chars" class="gen-slider-tool"></mat-slider>
     </div>
 
     <div class="gen-slider">
-      <label class="gen-slider-description">Numbers: <strong>{{numberSliderValue}}</strong></label>
-      <mat-slider [(ngModel)]="numberSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
+      <label for="mat-slider-numbers" class="gen-slider-description">Numbers: <strong>{{numberSliderValue}}</strong></label>
+      <mat-slider [(ngModel)]="numberSliderValue" [min]="sliderMin" [max]="sliderMax" id="mat-slider-numbers" class="gen-slider-tool"></mat-slider>
     </div>
 
     <div class="gen-slider">
-      <label class="gen-slider-description">Special characters: <strong>{{specialSliderValue}}</strong></label>
-      <mat-slider [(ngModel)]="specialSliderValue" [min]="sliderMin" [max]="sliderMax" class="gen-slider-tool"></mat-slider>
+      <label for="mat-slider-special-chars" class="gen-slider-description">Special characters: <strong>{{specialSliderValue}}</strong></label>
+      <mat-slider [(ngModel)]="specialSliderValue" [min]="sliderMin" [max]="sliderMax" id="mat-slider-special-chars" class="gen-slider-tool"></mat-slider>
     </div>
 
     <strength-indicator
