@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSliderChange } from '@angular/material';
 
 import { GeneratorService } from './services/generator.service';
 import { SLIDER_DEFAULTS } from './generator.constants';
@@ -21,6 +22,10 @@ export class AppComponent implements OnInit {
   constructor(private generatorService: GeneratorService) { }
 
   ngOnInit() {
+    this.generateString();
+  }
+
+  onInputChange(event: MatSliderChange): void {
     this.generateString();
   }
 
