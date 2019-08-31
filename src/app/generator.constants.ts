@@ -14,9 +14,9 @@ export const SLIDER_DEFAULTS = {
 };
 
 export const STRENGTH_COMMENTS = {
-  excellent: 'Wow! That\'s great!',
+  excellent: 'Wow! That\'s what we call \'excellent\'!',
   good: 'You\'re doing more than fine!',
-  okay: 'All looks okay.',
+  okay: 'This looks okay...',
   poor: 'I know you can do better than this...'
 };
 
