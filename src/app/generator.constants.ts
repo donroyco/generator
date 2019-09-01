@@ -5,7 +5,7 @@ export const DEFAULTS = {
 };
 
 export const SLIDER_DEFAULTS = {
-  defaultChar: 8,
+  defaultChar: 10,
   defaultNumber: 1,
   defaultSpecial: 1,
   min: 1,
@@ -17,7 +17,8 @@ export const STRENGTH_COMMENTS = {
   excellent: 'Wow! That\'s what we call \'excellent\'!',
   good: 'You\'re doing more than fine!',
   okay: 'This looks okay...',
-  poor: 'I know you can do better than this...'
+  poor: 'I know you can do better than this...',
+  worst: 'Ouch, this is too easy to remember.'
 };
 
 export const GRADES = {

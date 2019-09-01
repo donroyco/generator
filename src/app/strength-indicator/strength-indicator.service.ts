@@ -11,15 +11,17 @@ export class StrengthIndicatorService {
   gradeClass: string;
 
   public calculateStrength(char: number, number: number, special: number): Strength {
-    this.cumulative = char + number + special;
+    this.cumulative = (char * 1.5) + (number * 2) + (special * 2);
 
-    if (this.cumulative > 25) {
+    console.log('SUM: ', this.cumulative);
+
+    if (this.cumulative > 40) {
       this.grade = GRADES.A;
-    } else if (this.cumulative > 18) {
+    } else if (this.cumulative > 30) {
       this.grade = GRADES.B;
-    } else if (this.cumulative > 10) {
+    } else if (this.cumulative > 20) {
       this.grade = GRADES.C;
-    } else if (this.cumulative > 5) {
+    } else if (this.cumulative > 10) {
       this.grade = GRADES.D;
     } else {
       this.grade = GRADES.E;
@@ -48,7 +50,7 @@ export class StrengthIndicatorService {
       }
       default : {
         this.gradeClass = STRENGTH_BAR.red;
-        this.gradeComment = STRENGTH_COMMENTS.poor;
+        this.gradeComment = STRENGTH_COMMENTS.worst;
         break;
       }
     }
