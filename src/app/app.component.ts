@@ -15,9 +15,10 @@ export class AppComponent implements OnInit {
   specialSliderValue = SLIDER_DEFAULTS.defaultSpecial;
 
   generatedString: string;
-  sliderMin = SLIDER_DEFAULTS.min;
-  sliderMax = SLIDER_DEFAULTS.max;
+  sliderMax = SLIDER_DEFAULTS.defaultMax;
   sliderMaxChar = SLIDER_DEFAULTS.maxChar;
+  sliderMin = SLIDER_DEFAULTS.defaultMin;
+  sliderMinCustom = SLIDER_DEFAULTS.customMin;
 
   constructor(private generatorService: GeneratorService) { }
 

@@ -5,11 +5,12 @@ export const DEFAULTS = {
 };
 
 export const SLIDER_DEFAULTS = {
+  customMin: 0,
   defaultChar: 10,
+  defaultMax: 10,
+  defaultMin: 1,
   defaultNumber: 1,
   defaultSpecial: 1,
-  min: 1,
-  max: 10,
   maxChar: 40
 };
 

@@ -9,17 +9,38 @@
 
     <div class="gen-slider">
       <label for="mat-slider-chars" class="gen-slider-description">Length: <strong>{{charSliderValue}}</strong></label>
-      <mat-slider [(ngModel)]="charSliderValue" (input)="onInputChange($event)" [min]="sliderMin" [max]="sliderMaxChar" id="mat-slider-chars" class="gen-slider-tool"></mat-slider>
+      <mat-slider
+        [(ngModel)]="charSliderValue"
+        (input)="onInputChange($event)"
+        [min]="sliderMin"
+        [max]="sliderMaxChar"
+        id="mat-slider-chars"
+        class="gen-slider-tool">
+      </mat-slider>
     </div>
 
     <div class="gen-slider">
       <label for="mat-slider-numbers" class="gen-slider-description">Numbers: <strong>{{numberSliderValue}}</strong></label>
-      <mat-slider [(ngModel)]="numberSliderValue" (input)="onInputChange($event)" [min]="sliderMin" [max]="sliderMax" id="mat-slider-numbers" class="gen-slider-tool"></mat-slider>
+      <mat-slider
+        [(ngModel)]="numberSliderValue"
+        (input)="onInputChange($event)"
+        [min]="sliderMinCustom"
+        [max]="sliderMax"
+        id="mat-slider-numbers"
+        class="gen-slider-tool">
+      </mat-slider>
     </div>
 
     <div class="gen-slider">
       <label for="mat-slider-special-chars" class="gen-slider-description">Special characters: <strong>{{specialSliderValue}}</strong></label>
-      <mat-slider [(ngModel)]="specialSliderValue" (input)="onInputChange($event)" [min]="sliderMin" [max]="sliderMax" id="mat-slider-special-chars" class="gen-slider-tool"></mat-slider>
+      <mat-slider
+        [(ngModel)]="specialSliderValue"
+        (input)="onInputChange($event)"
+        [min]="sliderMinCustom"
+        [max]="sliderMax"
+        id="mat-slider-special-chars"
+        class="gen-slider-tool">
+      </mat-slider>
     </div>
 
     <strength-indicator

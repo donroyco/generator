@@ -13,8 +13,6 @@ export class StrengthIndicatorService {
   public calculateStrength(char: number, number: number, special: number): Strength {
     this.cumulative = (char * 1.5) + (number * 2) + (special * 2);
 
-    console.log('SUM: ', this.cumulative);
-
     if (this.cumulative > 40) {
       this.grade = GRADES.A;
     } else if (this.cumulative > 30) {
