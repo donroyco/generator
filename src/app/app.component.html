@@ -10,8 +10,10 @@
     <div class="gen-slider">
       <label for="mat-slider-chars" class="gen-slider-description">Length: <strong>{{charSliderValue}}</strong></label>
       <mat-slider
+        #charSlider
         [(ngModel)]="charSliderValue"
-        (input)="onInputChange($event)"
+        (slideend)="onInputChange(charSlider.value)"
+        (pointerup)="onInputChange(charSlider.value)"
         [min]="sliderMin"
         [max]="sliderMaxChar"
         id="mat-slider-chars"
@@ -22,8 +24,10 @@
     <div class="gen-slider">
       <label for="mat-slider-numbers" class="gen-slider-description">Numbers: <strong>{{numberSliderValue}}</strong></label>
       <mat-slider
+        #numberSlider
         [(ngModel)]="numberSliderValue"
-        (input)="onInputChange($event)"
+        (slideend)="onInputChange(numberSlider.value)"
+        (pointerup)="onInputChange(numberSlider.value)"
         [min]="sliderMinCustom"
         [max]="sliderMax"
         id="mat-slider-numbers"
@@ -34,8 +38,10 @@
     <div class="gen-slider">
       <label for="mat-slider-special-chars" class="gen-slider-description">Special characters: <strong>{{specialSliderValue}}</strong></label>
       <mat-slider
+        #specialChar
         [(ngModel)]="specialSliderValue"
-        (input)="onInputChange($event)"
+        (slideend)="onInputChange(specialChar.value)"
+        (pointerup)="onInputChange(specialChar.value)"
         [min]="sliderMinCustom"
         [max]="sliderMax"
         id="mat-slider-special-chars"
@@ -51,6 +57,6 @@
 
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-stroked-button disableRipple (click)="generateString()" color="primary">Renegerate</button>
+    <button mat-stroked-button disableRipple (click)="generateString()" color="primary">Regenerate</button>
   </mat-card-actions>
 </mat-card>

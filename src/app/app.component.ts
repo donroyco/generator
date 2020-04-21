@@ -26,8 +26,10 @@ export class AppComponent implements OnInit {
     this.generateString();
   }
 
-  onInputChange(event: MatSliderChange): void {
-    this.generateString();
+  onInputChange(value: number): void {
+    if (value) {
+      this.generateString();
+    }
   }
 
   generateString(): string {
